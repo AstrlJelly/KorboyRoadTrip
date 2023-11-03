@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2dkmkcvbp7m3"]
+[gd_scene load_steps=4 format=3 uid="uid://d2dkmkcvbp7m3"]
 
-[ext_resource type="Script" path="res://testing.gd" id="2_2bi1o"]
-[ext_resource type="Texture2D" uid="uid://b2p16h134s6p8" path="res://assets/IMG_20231102_213010.png" id="2_ul24w"]
+[ext_resource type="Script" path="res://scripts/testing/testing.gd" id="1_3y8hy"]
+[ext_resource type="Texture2D" uid="uid://b2p16h134s6p8" path="res://assets/characters/obelisk/IMG_20231102_213010.png" id="2_7q2f1"]
+[ext_resource type="Texture2D" uid="uid://cmmsfsnftcwnt" path="res://assets/ui/Number_beta.png" id="3_78mq4"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(379, 178)
 
 [node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("2_2bi1o")
+script = ExtResource("1_3y8hy")
 
 [node name="Goober" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
 position = Vector2(94, 83)
 scale = Vector2(6.44737, 6.44737)
-texture = ExtResource("2_ul24w")
+texture = ExtResource("2_7q2f1")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="NumberBeta" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(-204, -21)
+scale = Vector2(2.3275, 2.3275)
+texture = ExtResource("3_78mq4")

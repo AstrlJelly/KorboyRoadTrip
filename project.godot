@@ -13,4 +13,9 @@ config_version=5
 config/name="KorboyRoadtrip"
 run/main_scene="res://scenes/start.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.101961, 0.321569, 0.470588, 1)
