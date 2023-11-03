@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2dkmkcvbp7m3"]
+
+[ext_resource type="Script" path="res://testing.gd" id="2_2bi1o"]
+[ext_resource type="Texture2D" uid="uid://b2p16h134s6p8" path="res://assets/IMG_20231102_213010.png" id="2_ul24w"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(379, 178)
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_2bi1o")
+
+[node name="Goober" type="Sprite2D" parent="Node2D"]
+position = Vector2(94, 83)
+scale = Vector2(6.44737, 6.44737)
+texture = ExtResource("2_ul24w")
