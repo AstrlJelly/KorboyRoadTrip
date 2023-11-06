@@ -18,5 +18,5 @@ func _process(delta):
 	var stam = stamina as int
 	Num1.texture = Numbers[(stam - stam % 10) / 10]
 	Num2.texture = Numbers[stam % 10]
-	print("digit one = " + str((stam - stam % 10) / 10) + ", digit two = " + str(stam % 10))
+	# print("digit one = " + str((stam - stam % 10) / 10) + ", digit two = " + str(stam % 10))
 	pass
