@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2p16h134s6p8"
-path="res://.godot/imported/IMG_20231102_213010.png-f6df2fd11b76a0d5f71352962ca3c61d.ctex"
+uid="uid://cgkap0sww2mm0"
+path="res://.godot/imported/06.png-45cbe14ab7fa04a5a36a09ea76cde017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/obelisk/IMG_20231102_213010.png"
-dest_files=["res://.godot/imported/IMG_20231102_213010.png-f6df2fd11b76a0d5f71352962ca3c61d.ctex"]
+source_file="res://assets/ui/numbers/06.png"
+dest_files=["res://.godot/imported/06.png-45cbe14ab7fa04a5a36a09ea76cde017.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
