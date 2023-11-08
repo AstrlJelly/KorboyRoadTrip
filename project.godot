@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="KorboyRoadtrip"
-run/main_scene="res://scenes/start.tscn"
+run/main_scene="res://scenes/testing.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.png"
+
+[autoload]
+
+BeatMachine="*res://scripts/global/beat_machine.gd"
 
 [input]
 

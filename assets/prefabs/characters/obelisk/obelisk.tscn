@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfxfep2hffemx"]
+
+[ext_resource type="Texture2D" uid="uid://dl3s4yh8rhqv4" path="res://assets/sprites/characters/obelisk/idle/ob_idle_0_1f.png" id="1_v8uo4"]
+[ext_resource type="Script" path="res://scripts/characters/obelisk/obelisk.gd" id="1_xhfg3"]
+[ext_resource type="Texture2D" uid="uid://b8rjbfunrgedw" path="res://assets/sprites/characters/obelisk/idle/ob_idle_1_1f.png" id="2_jciiq"]
+[ext_resource type="Texture2D" uid="uid://dnypg2isgyrrl" path="res://assets/sprites/characters/obelisk/idle/ob_idle_2_2f.png" id="3_fefyr"]
+[ext_resource type="Texture2D" uid="uid://bpeixwqxxauyj" path="res://assets/sprites/characters/obelisk/idle/ob_idle_3_1f.png" id="4_whwki"]
+[ext_resource type="Texture2D" uid="uid://dps2jeic45o25" path="res://assets/sprites/characters/obelisk/idle/ob_idle_4_1f.png" id="5_c7dyf"]
+[ext_resource type="Texture2D" uid="uid://d2ljabe6odrxb" path="res://assets/sprites/characters/obelisk/idle/ob_idle_5_2f.png" id="6_8rvsq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81kek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v8uo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jciiq")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_fefyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_whwki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c7dyf")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_8rvsq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[node name="obelisk" type="Node2D" node_paths=PackedStringArray("anSp")]
+script = ExtResource("1_xhfg3")
+anSp = NodePath("Obelisk")
+
+[node name="Obelisk" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_81kek")
+animation = &"idle"
+autoplay = "idle"
