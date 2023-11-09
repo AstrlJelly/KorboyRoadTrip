@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpt4qo5ln43cb"
-path="res://.godot/imported/nightcurse.png-76f8e17ce844fd1357e0fa6d5ed2cee8.ctex"
+path="res://.godot/imported/nightcurse.png-08638be1c79d596b2d61620f581049c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/bots/platforms/nightcurse.png"
-dest_files=["res://.godot/imported/nightcurse.png-76f8e17ce844fd1357e0fa6d5ed2cee8.ctex"]
+source_file="res://assets/characters/bots/platforms/nightcurse.png"
+dest_files=["res://.godot/imported/nightcurse.png-08638be1c79d596b2d61620f581049c5.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2ljabe6odrxb"
-path="res://.godot/imported/ob_idle_5_2f.png-39d788ac161f77c8dfb23eb23618dbc6.ctex"
+path="res://.godot/imported/ob_idle_5_2f.png-e4b6d13580f69a059dc12492861bebed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/obelisk/idle/ob_idle_5_2f.png"
-dest_files=["res://.godot/imported/ob_idle_5_2f.png-39d788ac161f77c8dfb23eb23618dbc6.ctex"]
+source_file="res://assets/characters/obelisk/idle/ob_idle_5_2f.png"
+dest_files=["res://.godot/imported/ob_idle_5_2f.png-e4b6d13580f69a059dc12492861bebed.ctex"]
 
 [params]
 
