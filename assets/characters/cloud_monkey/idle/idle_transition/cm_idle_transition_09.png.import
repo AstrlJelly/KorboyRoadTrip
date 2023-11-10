@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5j385aac60"
-path="res://.godot/imported/cm_idle_transition_09.png-b7adb89928281b0c694cba1e213c0f97.ctex"
+path="res://.godot/imported/cm_idle_transition_09.png-86de0cbc87565c6fd809e02d279aa055.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/cloud_monkey/idle/idle_transition/cm_idle_transition_09.png"
-dest_files=["res://.godot/imported/cm_idle_transition_09.png-b7adb89928281b0c694cba1e213c0f97.ctex"]
+source_file="res://assets/characters/cloud_monkey/idle/idle_transition/cm_idle_transition_09.png"
+dest_files=["res://.godot/imported/cm_idle_transition_09.png-86de0cbc87565c6fd809e02d279aa055.ctex"]
 
 [params]
 

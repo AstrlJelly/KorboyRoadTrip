@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2ks7s32v24np"
-path="res://.godot/imported/cm_walk_5.png-2617b840c75dc12c03af8464bb186074.ctex"
+path="res://.godot/imported/cm_walk_5.png-35bcc85e125141850f03ea32f58fbc18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/cloud_monkey/walking/cm_walk_5.png"
-dest_files=["res://.godot/imported/cm_walk_5.png-2617b840c75dc12c03af8464bb186074.ctex"]
+source_file="res://assets/characters/cloud_monkey/walking/cm_walk_5.png"
+dest_files=["res://.godot/imported/cm_walk_5.png-35bcc85e125141850f03ea32f58fbc18.ctex"]
 
 [params]
 
