@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2dkmkcvbp7m3"]
+[gd_scene load_steps=26 format=3 uid="uid://d2dkmkcvbp7m3"]
 
 [ext_resource type="Script" path="res://scripts/testing/testing.gd" id="2_yxhug"]
 [ext_resource type="Script" path="res://scripts/numbers.gd" id="3_3hv4t"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://n8sae6e1d0xw" path="res://assets/sprites/ui/numbers/09.png" id="11_op4en"]
 [ext_resource type="Texture2D" uid="uid://heee4lm5gron" path="res://assets/characters/monkwee/on_fire.png" id="14_y7vl7"]
 [ext_resource type="PackedScene" uid="uid://bt7r8icjvgc24" path="res://assets/prefabs/characters/cloud_monkey/cloud_monkey.tscn" id="15_xjdgi"]
+[ext_resource type="PackedScene" uid="uid://d16wgellrn1bq" path="res://assets/prefabs/characters/mr_spork/mr_spork.tscn" id="17_bii86"]
 [ext_resource type="Texture2D" uid="uid://58bsdyudybq1" path="res://assets/sprites/tilesets/arizona/arizona.png" id="70_cccjb"]
 [ext_resource type="Texture2D" uid="uid://3rav5xb18exr" path="res://assets/sprites/tilesets/arizona/arizonanight.png" id="71_thjr1"]
 
@@ -519,10 +520,12 @@ nums = NodePath("../CanvasGroup/Numbers")
 
 [node name="cloud_monkey" parent="Characters" instance=ExtResource("15_xjdgi")]
 position = Vector2(97, 41.25)
-size = 1.0
 
 [node name="obelisk" parent="Characters" instance=ExtResource("8_rok22")]
 position = Vector2(143, 44.25)
+
+[node name="mr_spork" parent="Characters" instance=ExtResource("17_bii86")]
+position = Vector2(176.5, 50)
 
 [node name="OldStuff" type="Node2D" parent="."]
 visible = false

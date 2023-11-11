@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bfxfep2hffemx"]
+[gd_scene load_steps=11 format=3 uid="uid://bfxfep2hffemx"]
 
 [ext_resource type="Texture2D" uid="uid://dl3s4yh8rhqv4" path="res://assets/characters/obelisk/idle/ob_idle_0_1f.png" id="1_v8uo4"]
 [ext_resource type="Script" path="res://scripts/characters/obelisk/obelisk.gd" id="1_xhfg3"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dps2jeic45o25" path="res://assets/characters/obelisk/idle/ob_idle_4_1f.png" id="5_c7dyf"]
 [ext_resource type="Texture2D" uid="uid://d2ljabe6odrxb" path="res://assets/characters/obelisk/idle/ob_idle_5_2f.png" id="6_8rvsq"]
 [ext_resource type="Texture2D" uid="uid://dpvmka36h0eew" path="res://assets/characters/obelisk/running/run_temp.png" id="8_ekkq5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tajj"]
+radius = 9.0
+height = 31.22
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_81kek"]
 animations = [{
@@ -54,7 +58,13 @@ animations = [{
 [node name="obelisk" type="Node2D"]
 script = ExtResource("1_xhfg3")
 
-[node name="sprite" type="AnimatedSprite2D" parent="."]
+[node name="rigidbody" type="RigidBody2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="rigidbody"]
+position = Vector2(-0.563, 0.052)
+shape = SubResource("CapsuleShape2D_5tajj")
+
+[node name="sprite" type="AnimatedSprite2D" parent="rigidbody"]
 sprite_frames = SubResource("SpriteFrames_81kek")
 animation = &"idle"
 autoplay = "idle"

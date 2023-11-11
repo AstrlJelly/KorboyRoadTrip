@@ -272,7 +272,7 @@ can_sleep = false
 lock_rotation = true
 freeze_mode = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rigidbody"]
+[node name="collision" type="CollisionShape2D" parent="rigidbody"]
 position = Vector2(0, 9)
 shape = SubResource("CapsuleShape2D_4supq")
 
