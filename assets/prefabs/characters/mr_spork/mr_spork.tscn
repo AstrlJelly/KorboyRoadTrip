@@ -79,5 +79,5 @@ shape = SubResource("CapsuleShape2D_ge5ty")
 
 [node name="sprite" type="AnimatedSprite2D" parent="rigidbody"]
 sprite_frames = SubResource("SpriteFrames_dausw")
-animation = &"idle"
+animation = &"running"
 autoplay = "idle_forward"

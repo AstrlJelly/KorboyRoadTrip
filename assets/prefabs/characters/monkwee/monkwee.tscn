@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4m8asad2upch"]
 
 [ext_resource type="Script" path="res://scripts/characters/monkwee/monkwee.gd" id="1_5vvmt"]
-[ext_resource type="Texture2D" uid="uid://dlmad3aij5tfb" path="res://assets/characters/mr_spork/idle/idle_0.png" id="2_wbspd"]
-[ext_resource type="Texture2D" uid="uid://br3oq0828qyfn" path="res://assets/characters/mr_spork/idle/idle_1.png" id="3_65d12"]
-[ext_resource type="Texture2D" uid="uid://difc7nnevf1mn" path="res://assets/characters/mr_spork/idle/idle_2.png" id="4_8vg3a"]
-[ext_resource type="Texture2D" uid="uid://cs73dgjwm6ld3" path="res://assets/characters/mr_spork/idle/idle_3.png" id="5_xv3bo"]
+[ext_resource type="Texture2D" uid="uid://drxqwff08romy" path="res://assets/characters/monkwee/idle/idle_0.png" id="2_sk65y"]
+[ext_resource type="Texture2D" uid="uid://pvjycwv5c6ao" path="res://assets/characters/monkwee/idle/idle_1.png" id="3_4wtxk"]
+[ext_resource type="Texture2D" uid="uid://dn7cc24ciyvyj" path="res://assets/characters/monkwee/idle/idle_2.png" id="4_ctbsi"]
+[ext_resource type="Texture2D" uid="uid://b0w73wpaurof6" path="res://assets/characters/monkwee/idle/idle_3.png" id="5_wl7tm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kr51c"]
 
@@ -16,16 +16,16 @@ height = 59.4
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_wbspd")
-}, {
-"duration": 2.0,
-"texture": ExtResource("3_65d12")
+"texture": ExtResource("2_sk65y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_8vg3a")
+"texture": ExtResource("3_4wtxk")
 }, {
-"duration": 2.0,
-"texture": ExtResource("5_xv3bo")
+"duration": 1.0,
+"texture": ExtResource("4_ctbsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wl7tm")
 }],
 "loop": true,
 "name": &"idle",
@@ -80,4 +80,4 @@ shape = SubResource("CapsuleShape2D_ge5ty")
 sprite_frames = SubResource("SpriteFrames_dausw")
 animation = &"idle"
 autoplay = "idle_forward"
-frame_progress = 0.0517752
+frame_progress = 0.0502274
