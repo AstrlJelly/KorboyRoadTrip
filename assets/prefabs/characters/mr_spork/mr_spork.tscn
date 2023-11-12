@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://d16wgellrn1bq"]
+
+[ext_resource type="Texture2D" uid="uid://dlmad3aij5tfb" path="res://assets/characters/mr_spork/idle/idle_0.png" id="1_wbofr"]
+[ext_resource type="Script" path="res://scripts/characters/mr_spork/mr_spork.gd" id="1_yobdx"]
+[ext_resource type="Texture2D" uid="uid://br3oq0828qyfn" path="res://assets/characters/mr_spork/idle/idle_1.png" id="2_lej0v"]
+[ext_resource type="Texture2D" uid="uid://difc7nnevf1mn" path="res://assets/characters/mr_spork/idle/idle_2.png" id="3_n4m8i"]
+[ext_resource type="Texture2D" uid="uid://cs73dgjwm6ld3" path="res://assets/characters/mr_spork/idle/idle_3.png" id="4_ag18y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kr51c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge5ty"]
+radius = 17.05
+height = 59.4
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dausw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wbofr")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_lej0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n4m8i")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_ag18y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_forward",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"idle_transition",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"running",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"start_walking",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking",
+"speed": 12.0
+}]
+
+[node name="mr_spork" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_yobdx")
+size = 0.5
+
+[node name="rigidbody" type="RigidBody2D" parent="."]
+disable_mode = 1
+collision_layer = 2
+collision_mask = 2
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_kr51c")
+gravity_scale = 0.26
+can_sleep = false
+lock_rotation = true
+freeze_mode = 1
+
+[node name="collision" type="CollisionShape2D" parent="rigidbody"]
+position = Vector2(-4.29, 3.041)
+shape = SubResource("CapsuleShape2D_ge5ty")
+
+[node name="sprite" type="AnimatedSprite2D" parent="rigidbody"]
+sprite_frames = SubResource("SpriteFrames_dausw")
+animation = &"running"
+autoplay = "idle_forward"

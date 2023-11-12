@@ -1,7 +1,4 @@
-extends Node2D
-
-var beat = load("res://assets/prefabs/managers/beat.tscn")
-var test = "yay"
+extends AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,15 +8,16 @@ func _ready():
 func _process(delta):
 	pass
 
-func play(sfx, volume = 1.0):
-	var bus_index := AudioServer.get_bus_count()
-	AudioServer.add_bus(bus_index)
-	AudioServer.set_bus_name(bus_index, "sfx")
-	AudioServer.set_bus_send(bus_index, "Master") # <--
+func play_music(song : String, volume = 1.0, loop = true):
+	var beat = AudioStreamPlayer.new()
+	add_child(beat)
+	beat.stream = load("res://assets/music/" + song)
+	beat.volume_db = volume
+	beat.play()
 
-	var newBeat = beat.instantiate().get_children()[0]
-	newBeat.stream = load("res://assets/sfx/" + sfx)
-	newBeat.volume_db = volume
-	newBeat.play()
-	add_child(newBeat)
-	return newBeat
+func play_sound(sfx : String, volume = 1.0, loop = false):
+	var beat = AudioStreamPlayer.new()
+	add_child(beat)
+	beat.stream = load("res://assets/sfx/" + sfx)
+	beat.volume_db = volume
+	beat.play()
