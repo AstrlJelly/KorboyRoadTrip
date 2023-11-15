@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/numbers.gd" id="3_3hv4t"]
 [ext_resource type="Texture2D" uid="uid://cpvquel22wxcm" path="res://assets/sprites/ui/numbers/00.png" id="4_t5a44"]
 [ext_resource type="PackedScene" uid="uid://bfxfep2hffemx" path="res://assets/prefabs/characters/obelisk/obelisk.tscn" id="8_rok22"]
-[ext_resource type="Texture2D" uid="uid://heee4lm5gron" path="res://assets/characters/monkwee/on_fire.png" id="14_y7vl7"]
+[ext_resource type="Texture2D" uid="uid://heee4lm5gron" path="res://assets/sprites/characters/monkwee/on_fire.png" id="14_y7vl7"]
 [ext_resource type="PackedScene" uid="uid://bt7r8icjvgc24" path="res://assets/prefabs/characters/cloud_monkey/cloud_monkey.tscn" id="15_xjdgi"]
 [ext_resource type="Texture2D" uid="uid://58bsdyudybq1" path="res://assets/sprites/tilesets/arizona/arizona.png" id="70_cccjb"]
 [ext_resource type="Texture2D" uid="uid://3rav5xb18exr" path="res://assets/sprites/tilesets/arizona/arizonanight.png" id="71_thjr1"]
@@ -471,6 +471,7 @@ sources/0 = SubResource("TileSetAtlasSource_slahx")
 sources/1 = SubResource("TileSetAtlasSource_cdej5")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u7014"]
+load_path = "res://.godot/imported/obelisk_idle.png-a239e78629aabd18fc6f1e95a8375f6e.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht5o4"]
 size = Vector2(18.9224, 31.951)
