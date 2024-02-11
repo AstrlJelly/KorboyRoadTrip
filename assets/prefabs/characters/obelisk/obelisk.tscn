@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://bfxfep2hffemx"]
 
-[ext_resource type="Script" path="res://scripts/characters/obelisk/obelisk.gd" id="1_xhfg3"]
-[ext_resource type="Texture2D" uid="uid://cwgfc838heb5g" path="res://assets/characters/obelisk/idle/idle_0.png" id="2_eij3h"]
-[ext_resource type="Texture2D" uid="uid://bn7t2ed8k8q0d" path="res://assets/characters/obelisk/idle/idle_1.png" id="3_51b4g"]
-[ext_resource type="Texture2D" uid="uid://fo4sxhntexwh" path="res://assets/characters/obelisk/idle/idle_2.png" id="4_rroea"]
-[ext_resource type="Texture2D" uid="uid://bri00d0vph7p2" path="res://assets/characters/obelisk/idle/idle_3.png" id="5_kjd55"]
-[ext_resource type="Texture2D" uid="uid://cgp0qua1j0wdc" path="res://assets/characters/obelisk/idle/idle_4.png" id="6_whn2q"]
-[ext_resource type="Texture2D" uid="uid://dbqwcpe1uwxav" path="res://assets/characters/obelisk/idle/idle_5.png" id="7_8ap8q"]
-[ext_resource type="Texture2D" uid="uid://dpvmka36h0eew" path="res://assets/characters/obelisk/run_temp/run_temp.png" id="8_ekkq5"]
+[ext_resource type="Script" path="res://scripts/characters/character_base.gd" id="1_kbeo4"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_0_1f.png" id="1_v8uo4"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_1_1f.png" id="2_jciiq"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_2_2f.png" id="3_fefyr"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_3_1f.png" id="4_whwki"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_4_1f.png" id="5_c7dyf"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/idle/ob_idle_5_2f.png" id="6_8rvsq"]
+[ext_resource type="Texture2D" path="res://assets/characters/obelisk/running/run_temp.png" id="8_ekkq5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5tajj"]
 radius = 9.0
@@ -17,22 +17,22 @@ height = 31.22
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_eij3h")
+"texture": ExtResource("1_v8uo4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_51b4g")
+"texture": ExtResource("2_jciiq")
 }, {
 "duration": 2.0,
-"texture": ExtResource("4_rroea")
+"texture": ExtResource("3_fefyr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_kjd55")
+"texture": ExtResource("4_whwki")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_whn2q")
+"texture": ExtResource("5_c7dyf")
 }, {
 "duration": 2.0,
-"texture": ExtResource("7_8ap8q")
+"texture": ExtResource("6_8rvsq")
 }],
 "loop": true,
 "name": &"idle",
@@ -56,16 +56,15 @@ animations = [{
 }]
 
 [node name="obelisk" type="Node2D"]
-script = ExtResource("1_xhfg3")
+script = ExtResource("1_kbeo4")
 
-[node name="rigidbody" type="RigidBody2D" parent="."]
+[node name="character" type="CharacterBody2D" parent="."]
 
-[node name="collision" type="CollisionShape2D" parent="rigidbody"]
+[node name="collision" type="CollisionShape2D" parent="character"]
 position = Vector2(-0.563, 0.052)
 shape = SubResource("CapsuleShape2D_5tajj")
 
-[node name="sprite" type="AnimatedSprite2D" parent="rigidbody"]
+[node name="sprite" type="AnimatedSprite2D" parent="character"]
 sprite_frames = SubResource("SpriteFrames_81kek")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.304283

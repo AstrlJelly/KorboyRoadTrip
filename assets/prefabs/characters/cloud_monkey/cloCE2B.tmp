@@ -87,7 +87,7 @@ animations = [{
 "texture": ExtResource("7_dnvwd")
 }],
 "loop": true,
-"name": &"idle_long",
+"name": &"idle_forward",
 "speed": 12.0
 }, {
 "frames": [{
@@ -173,13 +173,8 @@ animations = [{
 "texture": ExtResource("34_hahia")
 }],
 "loop": false,
-"name": &"idle_long_from_idle",
+"name": &"idle_forward_from_idle",
 "speed": 12.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -213,13 +208,8 @@ animations = [{
 "texture": ExtResource("44_w8j0w")
 }],
 "loop": true,
-"name": &"running_1",
+"name": &"running",
 "speed": 12.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"running_2",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -265,18 +255,20 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="character" type="CharacterBody2D"]
-platform_floor_layers = 4294967294
+[node name="cloud_monkey" type="Node2D"]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("55_3ceae")
+bangPos = null
 size = 0.25
-gravity = 100.0
-speed = null
+idleTimer = 1.0
 
-[node name="collision" type="CollisionShape2D" parent="."]
+[node name="character" type="CharacterBody2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="character"]
 position = Vector2(0, 9)
 shape = SubResource("CapsuleShape2D_4supq")
 
-[node name="sprite" type="AnimatedSprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="character"]
 sprite_frames = SubResource("SpriteFrames_ntu6p")
-animation = &"running_1"
-autoplay = "idle_long"
+animation = &"start_walking"
+autoplay = "idle_forward"

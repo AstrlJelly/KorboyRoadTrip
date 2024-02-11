@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4m8asad2upch"]
+[gd_scene load_steps=8 format=3 uid="uid://b4m8asad2upch"]
 
-[ext_resource type="Script" path="res://scripts/characters/monkwee/monkwee.gd" id="1_5vvmt"]
+[ext_resource type="Script" path="res://scripts/characters/character_base.gd" id="1_ioqqt"]
 [ext_resource type="Texture2D" uid="uid://drxqwff08romy" path="res://assets/characters/monkwee/idle/idle_0.png" id="2_sk65y"]
 [ext_resource type="Texture2D" uid="uid://pvjycwv5c6ao" path="res://assets/characters/monkwee/idle/idle_1.png" id="3_4wtxk"]
 [ext_resource type="Texture2D" uid="uid://dn7cc24ciyvyj" path="res://assets/characters/monkwee/idle/idle_2.png" id="4_ctbsi"]
 [ext_resource type="Texture2D" uid="uid://b0w73wpaurof6" path="res://assets/characters/monkwee/idle/idle_3.png" id="5_wl7tm"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kr51c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge5ty"]
 radius = 17.05
@@ -59,24 +57,15 @@ animations = [{
 
 [node name="monkwee" type="Node2D"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_5vvmt")
+script = ExtResource("1_ioqqt")
 
-[node name="rigidbody" type="RigidBody2D" parent="."]
-disable_mode = 1
-collision_layer = 2
-collision_mask = 2
-input_pickable = true
-physics_material_override = SubResource("PhysicsMaterial_kr51c")
-gravity_scale = 0.26
-can_sleep = false
-lock_rotation = true
-freeze_mode = 1
+[node name="character" type="CharacterBody2D" parent="."]
 
-[node name="collision" type="CollisionShape2D" parent="rigidbody"]
+[node name="collision" type="CollisionShape2D" parent="character"]
 position = Vector2(-4.29, 3.041)
 shape = SubResource("CapsuleShape2D_ge5ty")
 
-[node name="sprite" type="AnimatedSprite2D" parent="rigidbody"]
+[node name="sprite" type="AnimatedSprite2D" parent="character"]
 sprite_frames = SubResource("SpriteFrames_dausw")
 animation = &"idle"
 autoplay = "idle_forward"
